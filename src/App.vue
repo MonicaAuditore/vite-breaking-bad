@@ -11,11 +11,18 @@ export default {
     AppMain,
     AppFooter,
   },
+
+  data() {
+    return {
+      charachters: [],
+    };
+  },
   created() {
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php")
       .then((response) => {
-        console.log(response);
+        console.log(response.data.data.slice(0, 20));
+        this.charachters = response.data.data.slice(0, 20);
       });
   },
 };
@@ -24,7 +31,10 @@ export default {
 <template>
   <AppHeader />
 
-  <AppMain />
+  <AppMain
+    :charactersList="charachters"
+    :charachtersCount="charachters.length"
+  />
 
   <AppFooter />
 </template>
