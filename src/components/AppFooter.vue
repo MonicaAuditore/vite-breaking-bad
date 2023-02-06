@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div class="container">
-    <footer>AppFooter</footer>
+    <footer class="text-center"><strong>Found 20 characters</strong></footer>
   </div>
 </template>
 

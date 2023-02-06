@@ -12,7 +12,7 @@ export default {
 <template>
   <header>
     <div class="container text-start">
-      <h1>Yu-Gi-Oh Api</h1>
+      <h1 class="my-5">Yu-Gi-Oh Api</h1>
       <SearchForm />
     </div>
   </header>
