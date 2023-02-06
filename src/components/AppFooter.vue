@@ -4,10 +4,6 @@ export default {
 };
 </script>
 
-<template>
-  <!-- <div class="container">
-    <footer class="text-center"><strong>Found 20 characters</strong></footer>
-  </div> -->
-</template>
+<template></template>
 
 <style lang="scss" scoped></style>

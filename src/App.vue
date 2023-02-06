@@ -14,6 +14,7 @@ export default {
 
   data() {
     return {
+      loading: false,
       charachters: [],
     };
   },
@@ -21,6 +22,7 @@ export default {
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php")
       .then((response) => {
+        this.loading = true;
         console.log(response.data.data.slice(0, 20));
         this.charachters = response.data.data.slice(0, 20);
       });
