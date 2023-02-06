@@ -1,4 +1,6 @@
 <script>
+import CharacterCard from "./CharacterCard.vue";
+
 export default {
   name: "AppMain",
   props: {
@@ -10,6 +12,9 @@ export default {
       type: Number,
       default: 0,
     },
+  },
+  components: {
+    CharacterCard,
   },
 };
 </script>
@@ -27,17 +32,7 @@ export default {
             class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
           >
             <div class="col text-center" v-for="charachters in charactersList">
-              <div>
-                <img
-                  src="https://via.placeholder.com/300"
-                  alt="card image"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="bg-warning p-4">
-                <h3>Character name</h3>
-                <h5>Character status</h5>
-              </div>
+              <CharacterCard />
             </div>
           </div>
         </main>
