@@ -31,8 +31,8 @@ export default {
           <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
           >
-            <div class="col text-center" v-for="charachters in charactersList">
-              <CharacterCard />
+            <div class="col text-center" v-for="character in charactersList">
+              <CharacterCard :character="character" />
             </div>
           </div>
         </main>

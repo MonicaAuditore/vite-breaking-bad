@@ -1,7 +1,9 @@
 <script>
 export default {
   name: "CharacterCard",
-  props: {},
+  props: {
+    character: Object,
+  },
 };
 </script>
 
@@ -9,14 +11,14 @@ export default {
   <div>
     <div>
       <img
-        src="https://via.placeholder.com/300"
+        :src="character.card_images.image_url"
         alt="card image"
         class="img-fluid"
       />
     </div>
     <div class="bg-warning p-4">
-      <h3>Character name</h3>
-      <h5>Character status</h5>
+      <h3>{{ character.name }}</h3>
+      <h5>{{ character.archetype }}</h5>
     </div>
   </div>
 </template>
