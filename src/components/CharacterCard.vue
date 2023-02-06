@@ -10,10 +10,14 @@ export default {
 <template>
   <div>
     <div>
-      <img :src="character.card_images[1]" alt="card image" class="img-fluid" />
+      <img
+        :src="character.card_images[0].image_url"
+        alt="card image"
+        class="img-fluid"
+      />
     </div>
     <div class="bg-warning p-4">
-      <h3>{{ character.name }}</h3>
+      <h3 class="text-white">{{ character.name }}</h3>
       <h5>{{ character.archetype }}</h5>
     </div>
   </div>
