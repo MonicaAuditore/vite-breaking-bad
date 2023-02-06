@@ -5,7 +5,14 @@ export default {
 </script>
 
 <template>
-  <div>SearchForm</div>
+  <div class="col-lg-2">
+    <select class="form-select" aria-label="Select category">
+      <option selected>Select category</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
