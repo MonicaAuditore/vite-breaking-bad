@@ -13,12 +13,14 @@ export default {
         </div>
 
         <main class="">
-          <div
-            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-auto"
-          >
-            <div class="col text-center">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+            <div class="col text-center" v-for="i in 15">
               <div>
-                <img src="https://via.placeholder.com/300" alt="card image" />
+                <img
+                  src="https://via.placeholder.com/300"
+                  alt="card image"
+                  class="img-fluid"
+                />
               </div>
               <div class="bg-warning p-4">
                 <h3>Character name</h3>
