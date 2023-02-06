@@ -23,8 +23,4 @@ export default {
 
 <style lang="scss">
 @import "./styles/main.scss";
-
-a {
-  color: aliceblue;
-}
 </style>
