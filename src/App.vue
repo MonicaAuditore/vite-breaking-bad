@@ -14,7 +14,7 @@ export default {
 
   data() {
     return {
-      loading: false,
+      loading: true,
       charachters: [],
     };
   },
@@ -22,7 +22,7 @@ export default {
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php")
       .then((response) => {
-        this.loading = true;
+        this.loading = false;
         console.log(response.data.data.slice(0, 20));
         this.charachters = response.data.data.slice(0, 20);
       });
@@ -32,15 +32,20 @@ export default {
 
 <template>
   <AppHeader />
-
-  <AppMain
-    :charactersList="charachters"
-    :charachtersCount="charachters.length"
-  />
+  <div class="text-center">
+    <div v-if="loading"><span class="loader"></span></div>
+    <div v-else>
+      <AppMain
+        :charactersList="charachters"
+        :charachtersCount="charachters.length"
+      />
+    </div>
+  </div>
 
   <AppFooter />
 </template>
 
 <style lang="scss">
 @import "./styles/main.scss";
+@import "./styles/loader.scss";
 </style>
