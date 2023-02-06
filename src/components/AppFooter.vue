@@ -5,7 +5,9 @@ export default {
 </script>
 
 <template>
-  <footer>AppFooter</footer>
+  <div class="container">
+    <footer>AppFooter</footer>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>

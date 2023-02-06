@@ -11,9 +11,10 @@ export default {
 
 <template>
   <header>
-    <h1>Yu-Gi-Oh Api</h1>
-
-    <SearchForm />
+    <div class="container text-start">
+      <h1>Yu-Gi-Oh Api</h1>
+      <SearchForm />
+    </div>
   </header>
 </template>
 
