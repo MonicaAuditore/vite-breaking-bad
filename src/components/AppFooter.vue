@@ -5,9 +5,9 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <!-- <div class="container">
     <footer class="text-center"><strong>Found 20 characters</strong></footer>
-  </div>
+  </div> -->
 </template>
 
 <style lang="scss" scoped></style>

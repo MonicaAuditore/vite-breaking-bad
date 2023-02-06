@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div class="col-lg-2">
+  <div class="col-lg-2 my-5">
     <select class="form-select" aria-label="Select category">
       <option selected>Select category</option>
       <option value="1">One</option>

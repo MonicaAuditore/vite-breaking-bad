@@ -12,8 +12,12 @@ export default {
 <template>
   <header>
     <div class="container text-start">
-      <h1 class="my-5">Yu-Gi-Oh Api</h1>
-      <SearchForm />
+      <h1 class="py-5">Yu-Gi-Oh Api</h1>
+    </div>
+    <div class="bg-warning">
+      <div class="container text-start py-3">
+        <SearchForm />
+      </div>
     </div>
   </header>
 </template>
