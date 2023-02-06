@@ -1,11 +1,7 @@
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: {},
 };
 </script>
 
@@ -18,7 +14,6 @@ export default {
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style lang="scss">
