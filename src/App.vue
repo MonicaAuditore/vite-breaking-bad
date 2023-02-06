@@ -1,4 +1,5 @@
 <script>
+import axios from "axios";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
@@ -9,6 +10,13 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
+  },
+  created() {
+    axios
+      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php")
+      .then((response) => {
+        console.log(response);
+      });
   },
 };
 </script>

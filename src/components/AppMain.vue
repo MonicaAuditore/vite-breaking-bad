@@ -9,11 +9,13 @@ export default {
     <div class="container">
       <div class="bg-white p-5">
         <div class="text-start bg-black text-light py-3 ps-4">
-          <strong>Found 20 characters</strong>
+          <strong>Found 39 cards</strong>
         </div>
 
         <main class="">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
+          >
             <div class="col text-center" v-for="i in 15">
               <div>
                 <img
