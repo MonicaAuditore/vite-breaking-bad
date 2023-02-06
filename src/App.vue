@@ -21,7 +21,7 @@ export default {
   <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style>
+<style lang="scss">
 .logo {
   height: 6em;
   padding: 1.5em;
