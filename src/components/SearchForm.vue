@@ -1,11 +1,11 @@
 <script>
 export default {
-  name: "AppFooter",
+  name: "SearchForm",
 };
 </script>
 
 <template>
-  <footer>AppFooter</footer>
+  <div>SearchForm</div>
 </template>
 
 <style lang="scss" scoped></style>

@@ -4,6 +4,8 @@ export default {
 };
 </script>
 
-<template>AppMain</template>
+<template>
+  <main>AppMain</main>
+</template>
 
 <style lang="scss" scoped></style>
