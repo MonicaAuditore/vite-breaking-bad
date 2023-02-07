@@ -26,7 +26,6 @@ export default {
           },
         })
         .then((response) => {
-          // this.loading = false;
           this.store.contenitoreGenerale = response.data.data.slice(0, 20);
         });
     },

@@ -16,9 +16,9 @@ export default {
         class="img-fluid"
       />
     </div>
-    <div class="bg-warning p-4">
-      <h3 class="text-white">{{ character.name }}</h3>
-      <h5>{{ character.archetype }}</h5>
+    <div id="cardContainer" class="bg-warning p-4">
+      <h4 class="text-white">{{ character.name }}</h4>
+      <h6>{{ character.archetype }}</h6>
     </div>
   </div>
 </template>

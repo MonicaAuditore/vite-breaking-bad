@@ -28,4 +28,5 @@ export default {
 <style lang="scss">
 @import "./styles/main.scss";
 @import "./styles/loader.scss";
+@import "./styles/CharacterrCard.scss";
 </style>
