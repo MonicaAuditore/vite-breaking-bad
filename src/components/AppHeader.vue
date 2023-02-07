@@ -21,18 +21,25 @@ export default {
 
       axios
         .get("https://db.ygoprodeck.com/api/v7/cardinfo.php", {
-          // params: {
-          //   filter: this.store.statusValue,
-          // },
+          params: {
+            archetype: this.store.archetiopoInput,
+          },
         })
         .then((response) => {
-          this.loading = false;
+          // this.loading = false;
           this.store.contenitoreGenerale = response.data.data.slice(0, 20);
         });
     },
   },
   created() {
     this.getCharacters();
+
+    axios
+      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php", {})
+      .then((response) => {
+        this.loading = false;
+        this.store.contenitoreGenerale = response.data.data.slice(0, 20);
+      });
 
     axios
       .get("https://db.ygoprodeck.com/api/v7/archetypes.php")

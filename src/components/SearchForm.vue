@@ -7,29 +7,38 @@ export default {
       store,
     };
   },
+  methods: {
+    formSottomesso() {
+      console.log("form sottomesso");
+    },
+  },
 };
 </script>
 
 <template>
   <div class="col-lg-2 my-5">
-    <select
-      v-model="store.statusValue"
-      name="status"
-      class="form-select"
-      aria-label="Select category"
-    >
-      <option selected value="">Select category</option>
-      <option v-for="archetipo in store.nameValue" value="1">
-        {{ archetipo.archetype_name }}
-      </option>
-    </select>
-    <button
-      type="button"
-      class="btn btn-light my-3"
-      v-on:click="$emit('search')"
-    >
-      cerca
-    </button>
+    <form action="" @submit.prevent="formSottomesso()">
+      <select
+        v-model="store.archetiopoInput"
+        class="form-select"
+        aria-label="Select category"
+      >
+        <option selected value="">Select archetype</option>
+        <option
+          v-for="archetipo in store.nameValue"
+          :value="archetipo.archetype_name"
+        >
+          {{ archetipo.archetype_name }}
+        </option>
+      </select>
+      <button
+        type="submit"
+        class="btn btn-light my-3"
+        v-on:click="$emit('search')"
+      >
+        cerca
+      </button>
+    </form>
   </div>
 </template>
 
