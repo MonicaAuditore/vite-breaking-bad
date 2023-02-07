@@ -1,10 +1,27 @@
 <script>
+import axios from "axios";
+import { store } from "../store";
 import SearchForm from "./SearchForm.vue";
 
 export default {
   name: "AppHeader",
   components: {
     SearchForm,
+  },
+  data() {
+    return {
+      loading: true,
+      store,
+    };
+  },
+  created() {
+    axios
+      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php")
+      .then((response) => {
+        this.loading = false;
+
+        this.store.contenitoreGenerale = response.data.data.slice(0, 20);
+      });
   },
 };
 </script>
