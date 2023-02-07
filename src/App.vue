@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+import { store } from "./store";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
@@ -15,7 +16,7 @@ export default {
   data() {
     return {
       loading: true,
-      charachters: [],
+      store,
     };
   },
   created() {
@@ -24,7 +25,7 @@ export default {
       .then((response) => {
         this.loading = false;
         console.log(response.data.data.slice(0, 20));
-        this.charachters = response.data.data.slice(0, 20);
+        this.store.contenitoreGenerale = response.data.data.slice(0, 20);
       });
   },
 };
@@ -35,10 +36,7 @@ export default {
   <div class="text-center">
     <div v-if="loading"><span class="loader"></span></div>
     <div v-else>
-      <AppMain
-        :charactersList="charachters"
-        :charachtersCount="charachters.length"
-      />
+      <AppMain />
     </div>
   </div>
 
