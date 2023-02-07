@@ -14,6 +14,7 @@ export default {
   <div class="col-lg-2 my-5">
     <select
       v-model="store.statusValue"
+      name="status"
       class="form-select"
       aria-label="Select category"
     >
@@ -22,6 +23,13 @@ export default {
         {{ archetipo.archetype_name }}
       </option>
     </select>
+    <button
+      type="button"
+      class="btn btn-light my-3"
+      v-on:click="$emit('search')"
+    >
+      cerca
+    </button>
   </div>
 </template>
 
