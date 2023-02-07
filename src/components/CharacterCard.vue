@@ -16,7 +16,10 @@ export default {
         class="img-fluid"
       />
     </div>
-    <div id="cardContainer" class="bg-warning p-4">
+    <div
+      id="cardContainer"
+      class="bg-warning p-4 d-flex flex-column justify-content-between align-self-end"
+    >
       <h4 class="text-white">{{ character.name }}</h4>
       <h6>{{ character.archetype }}</h6>
     </div>
