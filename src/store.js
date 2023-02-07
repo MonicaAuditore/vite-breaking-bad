@@ -1,3 +1,7 @@
 import { reactive } from "vue";
 
-export const store = reactive({ contenitoreGenerale: [] });
+export const store = reactive({
+  contenitoreGenerale: [],
+  nameValue: [],
+  statusValue: "",
+});

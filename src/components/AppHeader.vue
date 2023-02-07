@@ -22,6 +22,13 @@ export default {
 
         this.store.contenitoreGenerale = response.data.data.slice(0, 20);
       });
+
+    axios
+      .get("https://db.ygoprodeck.com/api/v7/archetypes.php")
+      .then((response) => {
+        this.store.nameValue = response.data;
+        console.log(this.store.nameValue);
+      });
   },
 };
 </script>

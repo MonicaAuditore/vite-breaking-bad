@@ -1,16 +1,26 @@
 <script>
+import { store } from "../store";
 export default {
   name: "SearchForm",
+  data() {
+    return {
+      store,
+    };
+  },
 };
 </script>
 
 <template>
   <div class="col-lg-2 my-5">
-    <select class="form-select" aria-label="Select category">
-      <option selected>Select category</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+    <select
+      v-model="store.statusValue"
+      class="form-select"
+      aria-label="Select category"
+    >
+      <option selected value="">Select category</option>
+      <option v-for="archetipo in store.nameValue" value="1">
+        {{ archetipo.archetype_name }}
+      </option>
     </select>
   </div>
 </template>
