@@ -1,10 +1,12 @@
 <script>
 import CharacterCard from "./CharacterCard.vue";
+import AppLoader from "./AppLoader.vue";
 import { store } from "../store";
 export default {
   name: "AppMain",
   components: {
     CharacterCard,
+    AppLoader,
   },
   data() {
     return {
@@ -23,6 +25,9 @@ export default {
         </div>
 
         <main>
+          <div v-if="store.loading">
+            <AppLoader />
+          </div>
           <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
           >

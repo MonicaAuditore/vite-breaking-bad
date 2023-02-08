@@ -10,7 +10,6 @@ export default {
   },
   data() {
     return {
-      loading: true,
       store,
     };
   },
@@ -32,11 +31,11 @@ export default {
   },
   created() {
     this.getCharacters();
-
+    this.store.loading = true;
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php", {})
       .then((response) => {
-        this.loading = false;
+        this.store.loading = false;
         this.store.contenitoreGenerale = response.data.data.slice(0, 20);
       });
 
