@@ -28,6 +28,7 @@ export default {
           this.store.contenitoreGenerale = response.data.data.slice(0, 20);
         });
     },
+    resetSearch() {},
   },
   created() {
     this.getCharacters();
@@ -55,7 +56,7 @@ export default {
     </div>
     <div class="bg-warning">
       <div class="container text-start py-3">
-        <SearchForm @search="getCharacters()" />
+        <SearchForm @search="getCharacters" @clear="resetSearch" />
       </div>
     </div>
   </header>

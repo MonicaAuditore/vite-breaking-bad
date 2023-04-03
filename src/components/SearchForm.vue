@@ -38,6 +38,13 @@ export default {
       >
         cerca
       </button>
+      <!-- <button
+        type="submit"
+        class="btn btn-light my-3 mx-3"
+        :click="$emit('clear')"
+      >
+        reset
+      </button> -->
     </form>
   </div>
 </template>

@@ -17,13 +17,7 @@ export default {
 
 <template>
   <AppHeader />
-  <!-- <div class="text-center">
-    <div v-if="loading"><span class="loader"></span></div>
-    <div v-else> -->
   <AppMain />
-  <!-- </div>
-  </div> -->
-
   <AppFooter />
 </template>
 
